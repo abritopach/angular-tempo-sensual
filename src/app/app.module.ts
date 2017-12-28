@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // Angular Material Components Module.
@@ -12,6 +13,7 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from '../common/components/header/app-header/app-header.component';
 import { AppFooterComponent } from '../common/components/footer/app-footer/app-footer.component';
 import { ContactComponent } from '../components/contact/contact.component';
+import { ScheduleComponent } from '../components/schedule/schedule.component';
 
 
 @NgModule({
@@ -19,11 +21,13 @@ import { ContactComponent } from '../components/contact/contact.component';
     AppComponent,
     AppHeaderComponent,
     AppFooterComponent,
-    ContactComponent
+    ContactComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MyCustomMaterialModule,
     AppRoutingModule
   ],

@@ -23,6 +23,9 @@ export class AppHeaderComponent implements OnInit {
     if (event.tab.textLabel === 'Contacto') {
       this.router.navigate(['contact']);
     }
+    if (event.tab.textLabel === 'Horario') {
+      this.router.navigate(['schedule']);
+    }
   }
 
 }

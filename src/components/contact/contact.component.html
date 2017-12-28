@@ -1,3 +1,24 @@
-<p>
-  contact works!
-</p>
+<form #myForm="ngForm" (ngSubmit)="sendQuery(myForm)">
+  <mat-form-field class="full-width">
+    <input matInput type="text" name="name" placeholder="Nombre y apellidos" ngModel required>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" hintLabel="Valid email format: jhon@gmail.com">
+    <input matInput type="email" name="email" placeholder="Email" ngModel required>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput type="text" name="phoneNumber" placeholder="Teléfono" ngModel required>
+  </mat-form-field>
+
+  <mat-form-field class="full-width" hintLabel="Max 100 caracteres">
+    <textarea #textarea matInput name="query" placeholder="Consulta" ngModel required></textarea>
+    <mat-hint align="end">{{textarea.value?.length || 0}}/100</mat-hint>
+  </mat-form-field>
+
+  <div class="button-row">
+      <button mat-raised-button color="primary">Enviar</button>
+    </div>
+
+  <pre>{{myForm.value | json}}</pre>
+</form>

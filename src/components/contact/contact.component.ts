@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms/src/directives/ng_form';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  email: any;
+
+  constructor() {
+    this.email = new FormControl('', [Validators.required, Validators.email]);
+  }
 
   ngOnInit() {
+  }
+
+  sendQuery(myForm: NgForm) {
+    console.log('Send query');
+    console.log(myForm);
+  }
+
+  getErrorMessage() {
+    return this.email.hasError('required') ? 'Campo obligatorio' :
+        this.email.hasError('email') ? 'Formato de email no válido' :
+            '';
   }
 
 }
