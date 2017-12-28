@@ -1,0 +1,52 @@
+<mat-toolbar color="primary">
+    <img mat-menu-item src="https://ui-avatars.com/api/?name=Tempo+Sensual&background=E91E63&color=fff">
+    <span>{{title}}</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <span>
+      <mat-menu #appMenu="matMenu" yPosition="above">
+        <button mat-menu-item>
+          <mat-icon> input </mat-icon>
+          <span> Acceso Alumnos </span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon> help </mat-icon>
+            <span> Ayuda </span>
+          </button>
+      </mat-menu>
+      
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </span>
+  </mat-toolbar>
+  <mat-tab-group mat-stretch-tabs (selectedTabChange)="onTabClick($event)">
+    <mat-tab label="Ritmos Latinos">
+      <ng-template mat-tab-label>
+          <mat-icon color="primary"> info </mat-icon>
+          Ritmos Latinos
+      </ng-template>
+      <h1>Ritmos Latinos</h1>
+      <mat-chip-list>
+        <mat-chip color="accent">Bachata</mat-chip>
+        <mat-chip color="primary">Salsa</mat-chip>
+        <mat-chip>Kizomba</mat-chip>
+      </mat-chip-list>
+    </mat-tab>
+    <mat-tab label="Horario">
+      <ng-template mat-tab-label>
+          <mat-icon color="primary"> event </mat-icon>
+          Horario
+      </ng-template>
+      <h1>Horario</h1>
+    </mat-tab>
+    <mat-tab label="Contacto">
+      <ng-template mat-tab-label>
+          <mat-icon color="primary"> place </mat-icon>
+          Contacto
+      </ng-template>
+      <h1>Contacto</h1>
+    </mat-tab>
+  </mat-tab-group>
