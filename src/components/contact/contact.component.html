@@ -27,10 +27,9 @@
       <app-form-errors [control]="textarea"></app-form-errors>
     </mat-grid-tile>
   </mat-grid-list>
+  <div class="button-row">
+    <button mat-raised-button color="primary" [disabled]="myForm.invalid || myForm.pending">Enviar</button>
+  </div>
 </form>
-<br>
-<div class="button-row">
-  <button mat-raised-button color="primary" [disabled]="myForm.invalid || myForm.pending">Enviar</button>
-</div>
 
 <pre>{{myForm.value | json}}</pre>

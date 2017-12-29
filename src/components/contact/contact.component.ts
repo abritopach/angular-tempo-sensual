@@ -7,6 +7,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/takeWhile';
 import 'rxjs/add/operator/startWith';
 
+import { MailSenderService } from '../../services/mail-sender.service';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -18,7 +20,7 @@ export class ContactComponent implements OnInit {
   public cols: number;
 
   // http://brianflove.com/2017/05/03/responsive-angular/
-  constructor(private observableMedia: ObservableMedia) {
+  constructor(private observableMedia: ObservableMedia, private mailSenderService: MailSenderService) {
   }
 
   ngOnInit() {
@@ -36,6 +38,18 @@ export class ContactComponent implements OnInit {
   sendQuery(myForm: NgForm) {
     console.log('Send query');
     console.log(myForm);
+
+    /*
+    this.mailSenderService.sendMail(myForm.controls['email'].value, '', 'Consulta ' + myForm.controls['name'].value
+    + ' ' + myForm.controls['phoneNumber'].value, myForm.controls['query'].value).subscribe(
+      data => {
+        console.log(data);
+      },
+      error => {
+          console.log(<any>error);
+      }
+    );
+    */
   }
 
 }

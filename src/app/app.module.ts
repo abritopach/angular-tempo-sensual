@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 // Angular Material Components Module.
 import { MyCustomMaterialModule } from './material.module';
 // Route Module.
@@ -23,6 +24,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 // Angular PDF Viewer.
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
+import { MailSenderService } from '../services/mail-sender.service';
+import { MailProviderSendgridService } from '../services/mail-provider-sendgrid.service';
+
 
 @NgModule({
   declarations: [
@@ -41,9 +45,13 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     MyCustomMaterialModule,
     AppRoutingModule,
     FlexLayoutModule,
-    PdfViewerModule
+    PdfViewerModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MailSenderService,
+    MailProviderSendgridService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
