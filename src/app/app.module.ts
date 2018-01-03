@@ -27,6 +27,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { MailSenderService } from '../services/mail-sender.service';
 import { MailProviderSendgridService } from '../services/mail-provider-sendgrid.service';
 
+import { Ng2IziToastModule } from 'ng2-izitoast';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { MailProviderSendgridService } from '../services/mail-provider-sendgrid.
     AppRoutingModule,
     FlexLayoutModule,
     PdfViewerModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2IziToastModule
   ],
   providers: [
     MailSenderService,

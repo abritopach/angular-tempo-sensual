@@ -9,6 +9,8 @@ import 'rxjs/add/operator/startWith';
 
 import { MailSenderService } from '../../services/mail-sender.service';
 
+import { Ng2IzitoastService } from 'ng2-izitoast';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -20,7 +22,8 @@ export class ContactComponent implements OnInit {
   public cols: number;
 
   // http://brianflove.com/2017/05/03/responsive-angular/
-  constructor(private observableMedia: ObservableMedia, private mailSenderService: MailSenderService) {
+  constructor(private observableMedia: ObservableMedia, private mailSenderService: MailSenderService,
+    private iziToast: Ng2IzitoastService) {
   }
 
   ngOnInit() {
@@ -38,6 +41,7 @@ export class ContactComponent implements OnInit {
   sendQuery(myForm: NgForm) {
     console.log('Send query');
     console.log(myForm);
+    this.showMessage();
 
     /*
     this.mailSenderService.sendMail(myForm.controls['email'].value, '', 'Consulta ' + myForm.controls['name'].value
@@ -50,6 +54,24 @@ export class ContactComponent implements OnInit {
       }
     );
     */
+  }
+
+  showMessage() {
+    this.iziToast.show({
+      id: 'user-messagge',
+      theme: 'dark',
+      icon: 'fa fa-address-card',
+      title: 'Duda enviada',
+      message: 'Gracias por enviar tus dudas. Nos pondremos en contacto lo antes posible.',
+      position: 'topCenter',
+      transitionIn: 'flipInX',
+      transitionOut: 'flipOutX',
+      progressBarColor: 'rgb(0, 255, 184)',
+      image: 'https://ui-avatars.com/api/?name=Tempo+Sensual&background=E91E63&color=fff',
+      imageWidth: 70,
+      layout: 2,
+      iconColor: 'rgb(0, 255, 184)'
+    });
   }
 
 }
