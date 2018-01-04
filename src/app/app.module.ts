@@ -29,6 +29,9 @@ import { MailProviderSendgridService } from '../services/mail-provider-sendgrid.
 
 import { Ng2IziToastModule } from 'ng2-izitoast';
 
+// Angular Google Maps.
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import { Ng2IziToastModule } from 'ng2-izitoast';
     FlexLayoutModule,
     PdfViewerModule,
     HttpClientModule,
-    Ng2IziToastModule
+    Ng2IziToastModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCA4Lqvi_IJLieTzYJjeBXUxuf9JBZQD68'
+    })
   ],
   providers: [
     MailSenderService,

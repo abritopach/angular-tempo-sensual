@@ -32,4 +32,15 @@
   </div>
 </form>
 
-<pre>{{myForm.value | json}}</pre>
+<!--<pre>{{myForm.value | json}}</pre>-->
+
+<!-- This creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map. -->
+<br>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker [latitude]="lat" [longitude]="lng">
+    <agm-info-window>
+      <strong>Tempo Sensual Calle Tarragona 18</strong>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>
