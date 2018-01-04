@@ -20,7 +20,7 @@ export class AppHeaderComponent implements OnInit {
     console.log('event => ', event);
     console.log('index => ', event.index);
     console.log('tab => ', event.tab);
-    if (event.tab.textLabel === 'Ritmos Latinos') {
+    if (event.tab.textLabel === 'Escuela de baile') {
       this.router.navigate(['home']);
     }
     if (event.tab.textLabel === 'Contacto') {

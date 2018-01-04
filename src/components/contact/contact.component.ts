@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
 
   lat = 40.4015689;
   lng = -3.6965655;
-  zoom = 18;
+  zoom = 16;
 
   // http://brianflove.com/2017/05/03/responsive-angular/
   constructor(private observableMedia: ObservableMedia, private mailSenderService: MailSenderService,
