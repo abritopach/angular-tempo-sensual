@@ -33,10 +33,10 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     const breakpoints: {[size: string]: number} = {
       ['xs'] : 1,
-      ['sm'] : 2,
+      ['sm'] : 1,
       ['md'] : 2,
-      ['lg'] : 2,
-      ['xl'] : 2
+      ['lg'] : 3,
+      ['xl'] : 3
     };
 
     this.observableMedia.subscribe(x => this.cols = breakpoints[x.mqAlias]);
