@@ -2,19 +2,19 @@
 
   <mat-grid-list [cols]="cols" rowHeight="4:1">
     <mat-grid-tile>
-      <mat-form-field class="full-width">
+      <mat-form-field class="full-width" hintLabel="Necesario nombre y apellidos">
         <input #name="ngModel" matInput type="text" name="name" placeholder="Nombre y apellidos" ngModel required>
       </mat-form-field>
       <app-form-errors [control]="name"></app-form-errors>
     </mat-grid-tile>
     <mat-grid-tile>
-      <mat-form-field class="full-width" hintLabel="Valid email format: jhon@gmail.com">
+      <mat-form-field class="full-width" hintLabel="Ejemplo formato email válido: jhon@gmail.com">
         <input #email="ngModel" matInput type="email" name="email" placeholder="Email" ngModel required email>
       </mat-form-field>
       <app-form-errors [control]="email"></app-form-errors>
     </mat-grid-tile>
     <mat-grid-tile>
-      <mat-form-field class="full-width">
+      <mat-form-field class="full-width" hintLabel="Ejemplo formato teléfono válido: 666666666">
         <input #phoneNumber="ngModel" matInput type="text" name="phoneNumber" placeholder="Teléfono" ngModel required>
       </mat-form-field>
       <app-form-errors [control]="phoneNumber"></app-form-errors>

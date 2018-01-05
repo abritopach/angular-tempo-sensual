@@ -17,9 +17,9 @@ export class AppHeaderComponent implements OnInit {
   }
 
   onTabClick(event: MatTabChangeEvent) {
-    console.log('event => ', event);
-    console.log('index => ', event.index);
-    console.log('tab => ', event.tab);
+    // console.log('event => ', event);
+    // console.log('index => ', event.index);
+    // console.log('tab => ', event.tab);
     if (event.tab.textLabel === 'Escuela de baile') {
       this.router.navigate(['home']);
     }

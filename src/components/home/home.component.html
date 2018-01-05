@@ -1,3 +1,14 @@
+<ngx-carousel class="banner" [inputs]="carouselBanner" (carouselLoad)="carouselBannerLoad()" (onMove)="onmoveFn($event)"
+(afterCarouselViewed)="afterCarouselViewedFn($event)">
+    <ngx-item NgxCarouselItem *ngFor="let tile of carouselBannerItems">
+        <div class="bannerStyle" [style.background]="'url(' + tile + ')'">
+        </div>
+    </ngx-item>
+    <button NgxCarouselPrev class="leftRs">&lt;</button>
+    <button NgxCarouselNext class="rightRs">&gt;</button>
+</ngx-carousel>
+<br>
+
 <mat-chip-list>
   <mat-chip color="accent" selected="true">Bachata</mat-chip>
   <mat-chip color="primary" selected="true">Salsa</mat-chip>
@@ -35,7 +46,7 @@
 <div fxLayout="column" fxLayoutAlign="center center">
   <div>
     <a href="https://www.meetup.com/es-ES/Aprendiendo-a-Bailar" target="_blank">
-      <img src="assets/img/meetup.png" alt="Imagen Meetup"/>
+      <img src="assets/img/meetup.png" alt="Imagen Meetup" class="meetupImg">
     </a>
   </div>
   <p class="homeText">

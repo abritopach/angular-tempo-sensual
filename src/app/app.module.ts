@@ -32,6 +32,10 @@ import { Ng2IziToastModule } from 'ng2-izitoast';
 // Angular Google Maps.
 import { AgmCoreModule } from '@agm/core';
 
+// NGX Carousel.
+import 'hammerjs';
+import { NgxCarouselModule } from 'ngx-carousel';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +59,8 @@ import { AgmCoreModule } from '@agm/core';
     Ng2IziToastModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCA4Lqvi_IJLieTzYJjeBXUxuf9JBZQD68'
-    })
+    }),
+    NgxCarouselModule
   ],
   providers: [
     MailSenderService,
