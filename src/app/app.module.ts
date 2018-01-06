@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from '../components/common/header/app-header/app-header.component';
 import { AppFooterComponent } from '../components/common//footer/app-footer/app-footer.component';
 import { HomeComponent } from '../components/home/home.component';
+import { VideosComponent } from '../components/videos/videos.component';
 import { ContactComponent } from '../components/contact/contact.component';
 import { ScheduleComponent } from '../components/schedule/schedule.component';
 import { ShowErrorsComponent } from '../components/errors/show-errors.component';
@@ -36,6 +37,8 @@ import { AgmCoreModule } from '@agm/core';
 import 'hammerjs';
 import { NgxCarouselModule } from 'ngx-carousel';
 
+// Validator.
+import { TelephoneNumberFormatValidatorDirective } from '../directives/validators/telephone-number-format-validator.directive';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,8 @@ import { NgxCarouselModule } from 'ngx-carousel';
     ContactComponent,
     ScheduleComponent,
     HomeComponent,
+    VideosComponent,
+    TelephoneNumberFormatValidatorDirective
   ],
   imports: [
     BrowserModule,

@@ -29,6 +29,9 @@ export class AppHeaderComponent implements OnInit {
     if (event.tab.textLabel === 'Horario') {
       this.router.navigate(['schedule']);
     }
+    if (event.tab.textLabel === 'Videos') {
+      this.router.navigate(['videos']);
+    }
   }
 
 }

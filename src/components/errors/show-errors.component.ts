@@ -16,7 +16,8 @@ export class ShowErrorsComponent {
     'minlength': (params) => 'El número mínimo de caracteres es ' + params.requiredLength,
     'maxlength': (params) => 'El numero máximo de caracteres es ' + params.requiredLength,
     'pattern': (params) => 'El patrón requerido es: ' + params.requiredPattern,
-    'email': (params) => 'Formato de email no válido.'
+    'email': (params) => 'Formato de email no válido.',
+    'telephoneNumber': (params) => params.message
   };
 
  @Input() private control: AbstractControlDirective | AbstractControl;

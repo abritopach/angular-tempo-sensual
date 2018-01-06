@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from '../components/home/home.component';
+import { VideosComponent } from '../components/videos/videos.component';
 import { ScheduleComponent } from '../components/schedule/schedule.component';
 import { ContactComponent } from '../components/contact/contact.component';
 
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'schedule', component: ScheduleComponent },
+  { path: 'videos', component: VideosComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
