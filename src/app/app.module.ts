@@ -10,7 +10,9 @@ import { MyCustomMaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
 import { AppHeaderComponent } from '../components/common/header/app-header/app-header.component';
 import { AppFooterComponent } from '../components/common//footer/app-footer/app-footer.component';
 import { HomeComponent } from '../components/home/home.component';
@@ -54,6 +56,7 @@ import { TelephoneNumberFormatValidatorDirective } from '../directives/validator
   ],
   imports: [
     BrowserModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
     FormsModule,
     MyCustomMaterialModule,
@@ -65,7 +68,7 @@ import { TelephoneNumberFormatValidatorDirective } from '../directives/validator
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCA4Lqvi_IJLieTzYJjeBXUxuf9JBZQD68'
     }),
-    NgxCarouselModule
+    NgxCarouselModule,
   ],
   providers: [
     MailSenderService,
