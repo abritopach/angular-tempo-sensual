@@ -1,0 +1,10 @@
+<mat-grid-list cols="12">
+  <div #videoThumbnail class="video-thumbnail">
+    <div *ngFor="let video of videos; let i=index;" (click)="handleSelectedVideo(video)" (keydown)="handleKeyPressed(video, i, $event)">
+        <video tabIndex="0" id="{{video.id}}" poster={{video.posterURL}}>
+            <source [src]="video?.videoURL" type="video/mp4"/>
+        </video>
+        <p text-center>{{video?.title}}</p>
+    </div>
+  </div>
+</mat-grid-list>

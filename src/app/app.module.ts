@@ -17,6 +17,7 @@ import { AppHeaderComponent } from '../components/common/header/app-header/app-h
 import { AppFooterComponent } from '../components/common//footer/app-footer/app-footer.component';
 import { HomeComponent } from '../components/home/home.component';
 import { VideosComponent } from '../components/videos/videos.component';
+import { VideoCarouselComponent } from '../components/video-carousel/video-carousel.component';
 import { ContactComponent } from '../components/contact/contact.component';
 import { ScheduleComponent } from '../components/schedule/schedule.component';
 import { ShowErrorsComponent } from '../components/errors/show-errors.component';
@@ -52,7 +53,8 @@ import { TelephoneNumberFormatValidatorDirective } from '../directives/validator
     ScheduleComponent,
     HomeComponent,
     VideosComponent,
-    TelephoneNumberFormatValidatorDirective
+    TelephoneNumberFormatValidatorDirective,
+    VideoCarouselComponent
   ],
   imports: [
     BrowserModule,

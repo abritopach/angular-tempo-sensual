@@ -1,0 +1,13 @@
+.video-thumbnail {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    overflow-y: hidden;
+}
+  
+.video-thumbnail video {
+    width: 214px;
+    height: 317px;
+    padding: 1px;
+    border: 1px solid grey;
+}

@@ -11,9 +11,11 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
 .then(() => {
   try {
+    /*
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/ngsw-worker.js') ;
     }
+    */
   } catch (e) { }
 
 })
