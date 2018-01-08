@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IMailProvider } from './imail-provider';
 import { MailProviderSendgridService } from './mail-provider-sendgrid.service';
+import { MailProviderMailgunService } from './mail-provider-mailgun.service';
 import { Observable } from 'rxjs/Observable';
 import { forkJoin } from 'rxjs/observable/forkJoin';
 import { timeoutWith } from 'rxjs/operators';
@@ -11,8 +12,9 @@ export class MailSenderService {
 
     private _providers: IMailProvider[] = [];
 
-    constructor(public sendgridProvider: MailProviderSendgridService) {
+    constructor(public sendgridProvider: MailProviderSendgridService, public mailgunProvider: MailProviderMailgunService) {
         this._providers.push(sendgridProvider);
+        this._providers.push(mailgunProvider);
     }
 
     getWorkingProvider(): Observable<any> {
@@ -44,7 +46,9 @@ export class MailSenderService {
             return Observable.create(err);
         });
         */
-        return this.sendgridProvider.sendMail(from, to, subject, message);
+
+        // return this.sendgridProvider.sendMail(from, to, subject, message);
+        return this.mailgunProvider.sendMail(from, to, subject, message);
     }
 
 }

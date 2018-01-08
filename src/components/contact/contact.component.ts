@@ -18,6 +18,8 @@ import { Ng2IzitoastService } from 'ng2-izitoast';
 })
 export class ContactComponent implements OnInit {
 
+  private readonly to: string = 'tempo.sensual@gmail.com';
+
   // The number of colums in the md-grid-list directive.
   cols: number;
 
@@ -43,21 +45,19 @@ export class ContactComponent implements OnInit {
   }
 
   sendQuery(myForm: NgForm) {
-    console.log('Send query');
-    console.log(myForm);
-    this.showMessage();
+    // console.log('Send query');
+    // console.log(myForm);
 
-    /*
-    this.mailSenderService.sendMail(myForm.controls['email'].value, '', 'Consulta ' + myForm.controls['name'].value
+    this.mailSenderService.sendMail(myForm.controls['email'].value, this.to, 'Consulta ' + myForm.controls['name'].value
     + ' ' + myForm.controls['phoneNumber'].value, myForm.controls['query'].value).subscribe(
       data => {
         console.log(data);
+        this.showMessage();
       },
       error => {
           console.log(<any>error);
       }
     );
-    */
   }
 
   showMessage() {
