@@ -21,6 +21,10 @@
       "resources": {
         "files": [
           "/assets/**"
+        ],
+        "urls": [
+          "http://lorempixel.com/214/317/**",
+          "http://techslides.com/demos/sample-videos/small.mp4"
         ]
       }
     }]

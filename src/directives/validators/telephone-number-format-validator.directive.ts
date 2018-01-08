@@ -15,7 +15,6 @@ export class TelephoneNumberFormatValidatorDirective implements Validator {
         'message': 'Formato teléfono incorrecto.'
       }
     };
-    console.log(isValidPhoneNumber);
     return isValidPhoneNumber ? null : message;
   }
 }

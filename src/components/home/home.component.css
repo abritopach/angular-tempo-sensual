@@ -1,12 +1,11 @@
 .homeText {
     text-align: justify;
     text-justify: inter-word;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 h5 {
     display: flex;
-    color: #ccc;
+    color: #d73964;
     width: 100%;
     margin-top: .2em!important;
   }
@@ -15,7 +14,7 @@ h5 {
     content: "";
     flex:1;
     align-self: center;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid#d73964;
   }
   h5::before {margin-right: .3em}
   h5::after {margin-left: .3em}

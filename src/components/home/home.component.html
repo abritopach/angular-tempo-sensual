@@ -1,55 +1,57 @@
-<ngx-carousel class="banner" [inputs]="carouselBanner" (carouselLoad)="carouselBannerLoad()" (onMove)="onmoveFn($event)"
-(afterCarouselViewed)="afterCarouselViewedFn($event)">
-    <ngx-item NgxCarouselItem *ngFor="let tile of carouselBannerItems">
-        <div class="bannerStyle" [style.background]="'url(' + tile + ')'">
-        </div>
-    </ngx-item>
-    <button NgxCarouselPrev class="leftRs">&lt;</button>
-    <button NgxCarouselNext class="rightRs">&gt;</button>
-</ngx-carousel>
-<br>
+<mat-grid-list cols="12">
+  <ngx-carousel class="banner" [inputs]="carouselBanner" (carouselLoad)="carouselBannerLoad()" (onMove)="onmoveFn($event)"
+  (afterCarouselViewed)="afterCarouselViewedFn($event)">
+      <ngx-item NgxCarouselItem *ngFor="let tile of carouselBannerItems">
+          <div class="bannerStyle" [style.background]="'url(' + tile + ')'">
+          </div>
+      </ngx-item>
+      <button NgxCarouselPrev class="leftRs" aria-label="Anterior">&lt;</button>
+      <button NgxCarouselNext class="rightRs" aria-label="Siguiente">&gt;</button>
+  </ngx-carousel>
+  <br>
 
-<mat-chip-list>
-  <mat-chip color="accent" selected="true">Bachata</mat-chip>
-  <mat-chip color="primary" selected="true">Salsa</mat-chip>
-  <mat-chip>Kizomba</mat-chip>
-</mat-chip-list>
-<div class="homeText">
-  <p>¡Bienvenidos a la casa del baile... <strong>Tempo Sensual</strong>!</p>
-  <p>En nuestra escuela de baile podrás especializarte en 2 de los bailes más demandados de los últimos años, la <strong>salsa</strong> y la <strong>bachata</strong>. 
-    Aprenderás figuras y secuencias con los recursos más actuales en la pista y te empaparás de musicalidad (serás capaz de identificar
-    correctamente los tiempos y estilos musicales). Además, con nuestro formato de clases progresivo de 2 horas, te asegurarás de afianzar
-    tus conocimientos en un tiempo record.
-  </p>
-  <p>
-      En <strong>Tempo Sensual</strong> le damos una vuelta al concepto arcaico de clases por mensualidades o bonos. En nuestra escuela sólo pagaras por las
-      clases a las que asistas y por un precio muy económico. Cada semana podrás elegir las clases a las que asistir y reservar plaza. Y no,
-      no has de traer pareja, con nuestro método nos aseguramos de que haya siempre un número compensado de chicos y chicas. Nos situamos en
-      el centro de Madrid (zona Delicias) con multiples opciones de transporte público a menos de cinco minutos a pie.
-  </p>
-  <p>
-      Aunque nos definamos como "escuela de baile" somos mucho más que eso, somos un <strong>Club de baile</strong>. No sólo asistirás a clases, también harás
-      salidas cada fin de semana a las discotecas más de moda de Madrid con entraras con promociones; viajarás a casas rurales bailongas y 
-      participaras en fiestas temáticas con tus compañeros. En definitiva, la forma perfecta de conocer gente fantastica que compartirá contigo
-      una de las mejores aficiones: el baile.
-  </p>
-  <p>
-    Date un paseo por nuestra web, revisa nuestros horarios y ponte en contacto con nosotros. ¡Esperamos verte pronto y que te unas a nuestra
-    comunidad de baile!
-  </p>
-  <p>Atentamente,
-    El equipo de profesores de <strong>Tempo Sensual</strong>
-  </p>
-</div>
-
-<h5>CLASES Y RESERVAS</h5>
-<div fxLayout="column" fxLayoutAlign="center center">
-  <div>
-    <a href="https://www.meetup.com/es-ES/Aprendiendo-a-Bailar" target="_blank">
-      <img src="assets/img/meetup.png" alt="Imagen Meetup" class="meetupImg">
-    </a>
+  <mat-chip-list>
+    <mat-chip color="accent" selected="true">Bachata</mat-chip>
+    <mat-chip color="primary" selected="true">Salsa</mat-chip>
+    <mat-chip>Kizomba</mat-chip>
+  </mat-chip-list>
+  <div class="homeText">
+    <p>¡Bienvenidos a la casa del baile... <strong>Tempo Sensual</strong>!</p>
+    <p>En nuestra escuela de baile podrás especializarte en 2 de los bailes más demandados de los últimos años, la <strong>salsa</strong> y la <strong>bachata</strong>. 
+      Aprenderás figuras y secuencias con los recursos más actuales en la pista y te empaparás de musicalidad (serás capaz de identificar
+      correctamente los tiempos y estilos musicales). Además, con nuestro formato de clases progresivo de 2 horas, te asegurarás de afianzar
+      tus conocimientos en un tiempo record.
+    </p>
+    <p>
+        En <strong>Tempo Sensual</strong> le damos una vuelta al concepto arcaico de clases por mensualidades o bonos. En nuestra escuela sólo pagaras por las
+        clases a las que asistas y por un precio muy económico. Cada semana podrás elegir las clases a las que asistir y reservar plaza. Y no,
+        no has de traer pareja, con nuestro método nos aseguramos de que haya siempre un número compensado de chicos y chicas. Nos situamos en
+        el centro de Madrid (zona Delicias) con multiples opciones de transporte público a menos de cinco minutos a pie.
+    </p>
+    <p>
+        Aunque nos definamos como "escuela de baile" somos mucho más que eso, somos un <strong>Club de baile</strong>. No sólo asistirás a clases, también harás
+        salidas cada fin de semana a las discotecas más de moda de Madrid con entraras con promociones; viajarás a casas rurales bailongas y 
+        participaras en fiestas temáticas con tus compañeros. En definitiva, la forma perfecta de conocer gente fantastica que compartirá contigo
+        una de las mejores aficiones: el baile.
+    </p>
+    <p>
+      Date un paseo por nuestra web, revisa nuestros horarios y ponte en contacto con nosotros. ¡Esperamos verte pronto y que te unas a nuestra
+      comunidad de baile!
+    </p>
+    <p>Atentamente,
+      El equipo de profesores de <strong>Tempo Sensual</strong>
+    </p>
   </div>
-  <p class="homeText">
-      Pulsa en la imagen para ver las próximas clases y reservar.
-  </p>
-</div>
+
+  <h5>CLASES Y RESERVAS</h5>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div>
+      <a href="https://www.meetup.com/es-ES/Aprendiendo-a-Bailar" target="_blank" rel="noopener">
+        <img src="assets/img/meetup.png" alt="Imagen Meetup" class="meetupImg">
+      </a>
+    </div>
+    <p class="homeText">
+        Pulsa en la imagen para ver las próximas clases y reservar.
+    </p>
+  </div>
+</mat-grid-list>

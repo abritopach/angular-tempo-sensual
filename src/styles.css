@@ -2,3 +2,6 @@
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+p, span, h1, h2, h3, h4, h5 {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

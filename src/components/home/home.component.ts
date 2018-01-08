@@ -77,14 +77,14 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  /* This will be triggered after carousel viewed */
+  /* This will be triggered after carousel viewed.  */
   afterCarouselViewedFn(data) {
-    console.log(data);
+    // console.log(data);
   }
 
-  /* It will be triggered on every slide*/
+  /* It will be triggered on every slide. */
   onmoveFn(data: NgxCarouselStore) {
-    console.log(data);
+    // console.log(data);
   }
 
 }
