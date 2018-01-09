@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   imgags: string[];
   carouselBannerItems: Array<any> = [];
   carouselBanner: NgxCarousel;
+  carouselTileItems: Array<any> = [];
+  carouselTile: NgxCarousel;
 
   constructor() { }
 
@@ -63,7 +65,43 @@ export class HomeComponent implements OnInit {
       touch: true
     };
 
+    this.carouselTile = {
+      grid: { xs: 2, sm: 3, md: 3, lg: 4, all: 0 },
+      speed: 600,
+      interval: 3000,
+      point: {
+        visible: true,
+        pointStyles: `
+          .ngxcarouselPoint {
+            list-style-type: none;
+            text-align: center;
+            padding: 12px;
+            margin: 0;
+            white-space: nowrap;
+            overflow: auto;
+            box-sizing: border-box;
+          }
+          .ngxcarouselPoint li {
+            display: inline-block;
+            border-radius: 50%;
+            border: 2px solid rgba(0, 0, 0, 0.55);
+            padding: 4px;
+            margin: 0 3px;
+            transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+            transition: .4s;
+          }
+          .ngxcarouselPoint li.active {
+              background: #6b6b6b;
+              transform: scale(1.2);
+          }
+        `
+      },
+      load: 2,
+      touch: true
+    };
+
     this.carouselBannerLoad();
+    this.carouselTileLoad();
   }
 
   carouselBannerLoad() {
@@ -71,6 +109,17 @@ export class HomeComponent implements OnInit {
     if (len <= 4) {
       for (let i = len; i < len + 5; i++) {
         this.carouselBannerItems.push(
+          this.imgags[Math.floor(Math.random() * this.imgags.length)]
+        );
+      }
+    }
+  }
+
+  carouselTileLoad() {
+    const len = this.carouselTileItems.length;
+    if (len <= 30) {
+      for (let i = len; i < len + 15; i++) {
+        this.carouselTileItems.push(
           this.imgags[Math.floor(Math.random() * this.imgags.length)]
         );
       }

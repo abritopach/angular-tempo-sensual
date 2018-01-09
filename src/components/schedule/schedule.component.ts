@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleComponent implements OnInit {
 
-  pdfSrc = 'https://vadimdez.github.io/ng2-pdf-viewer/pdf-test.pdf';
+  pdfSrc = 'assets/pdf/horario.pdf';
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 <mat-grid-list cols="12">
+  <!--
   <ngx-carousel class="banner" [inputs]="carouselBanner" (carouselLoad)="carouselBannerLoad()" (onMove)="onmoveFn($event)"
   (afterCarouselViewed)="afterCarouselViewedFn($event)">
       <ngx-item NgxCarouselItem *ngFor="let tile of carouselBannerItems">
@@ -7,6 +8,16 @@
       </ngx-item>
       <button NgxCarouselPrev class="leftRs" aria-label="Anterior">&lt;</button>
       <button NgxCarouselNext class="rightRs" aria-label="Siguiente">&gt;</button>
+  </ngx-carousel>
+-->
+
+  <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad()">
+    <ngx-tile NgxCarouselItem *ngFor="let tile of carouselTileItems; let i = index;">
+        <div class="tile" [style.background]="'url(' + tile + ')'">
+        </div>
+    </ngx-tile>
+    <button NgxCarouselPrev class="leftRs">&lt;</button>
+    <button NgxCarouselNext class="rightRs">&gt;</button>
   </ngx-carousel>
   <br>
 

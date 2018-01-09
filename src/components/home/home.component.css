@@ -8,23 +8,23 @@ h5 {
     color: #d73964;
     width: 100%;
     margin-top: .2em!important;
-  }
-  h5::before,
-  h5::after {
+}
+h5::before,
+h5::after {
     content: "";
     flex:1;
     align-self: center;
     border-bottom: 1px solid#d73964;
-  }
-  h5::before {margin-right: .3em}
-  h5::after {margin-left: .3em}
+}
+h5::before {margin-right: .3em}
+h5::after {margin-left: .3em}
 
-  .meetupImg {
+.meetupImg {
     width: 200px;
     height: auto;
-  }
+}
 
-  .bannerStyle {
+.bannerStyle {
     background-color: #ccc;
     background-size: cover !important;
     height: 450px;
@@ -35,7 +35,21 @@ h5 {
     height: 100%;
 }
 
-  .leftRs {
+.tile {
+    min-height: 200px;
+    background-color: #ccc;
+    background-size: cover !important;
+}
+
+.tile h1 {
+    text-align: center;
+    line-height: 200px;
+    background: rgba(0, 0, 0, 0.32);
+    color: white;
+    margin: 0;
+}
+
+.leftRs {
     position: absolute;
     margin: auto;
     top: 0;
