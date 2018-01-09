@@ -9,7 +9,6 @@ import { NG_VALIDATORS, Validator, FormControl, ValidationErrors } from '@angula
 export class TelephoneNumberFormatValidatorDirective implements Validator {
 
   validate(c: FormControl): ValidationErrors {
-    // const isValidPhoneNumber = /^\d{3,3}-\d{3,3}-\d{3,3}$/.test(c.value);
     let value = [];
     if ((c.value != null) && (c.value !== ' ')) {
       value = c.value.match(/\d/g);

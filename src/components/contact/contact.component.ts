@@ -51,7 +51,7 @@ export class ContactComponent implements OnInit {
     this.mailSenderService.sendMail(myForm.controls['email'].value, this.to, 'Consulta ' + myForm.controls['name'].value
     + ' ' + myForm.controls['phoneNumber'].value, myForm.controls['query'].value).subscribe(
       data => {
-        console.log(data);
+        // console.log(data);
         this.showMessage();
       },
       error => {
