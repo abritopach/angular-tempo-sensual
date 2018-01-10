@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pwa": "ng build --aot --prod && http-server ./dist",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot -prod",
+    "deploy": "ng build --aot --prod && firebase deploy"
   },
   "engines": {
     "node": "8.9.4",
