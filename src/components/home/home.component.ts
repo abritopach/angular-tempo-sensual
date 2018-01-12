@@ -19,10 +19,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.imgags = [
-      'assets/img/canberra.jpg',
-      'assets/img/canberra.jpg',
-      'assets/img/canberra.jpg',
-      'assets/img/canberra.jpg'
+      'assets/img/ts1.png',
+      'assets/img/ts2.png',
+      'assets/img/ts3.png',
+      'assets/img/ts4.png',
+      'assets/img/ts5.png'
     ];
 
     this.carouselBanner = {
@@ -117,10 +118,10 @@ export class HomeComponent implements OnInit {
 
   carouselTileLoad() {
     const len = this.carouselTileItems.length;
-    if (len <= 30) {
-      for (let i = len; i < len + 15; i++) {
+    if (len <= 4) {
+      for (let i = len; i <= 4; i++) {
         this.carouselTileItems.push(
-          this.imgags[Math.floor(Math.random() * this.imgags.length)]
+          this.imgags[i/*Math.floor(Math.random() * this.imgags.length)*/]
         );
       }
     }
