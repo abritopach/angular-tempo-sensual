@@ -23,6 +23,8 @@
           "/assets/**"
         ],
         "urls": [
+          "https://fonts.googleapis.com/icon?family=Material+Icons",
+          "https://ui-avatars.com/api/?name=Tempo+Sensual&background=E91E63&color=fff",
           "http://lorempixel.com/214/317/**",
           "http://techslides.com/demos/sample-videos/small.mp4"
         ]
