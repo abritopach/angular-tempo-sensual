@@ -1,6 +1,7 @@
 {
   "name": "tempo-sensual",
   "version": "0.0.0",
+  "author": "Adrián Brito https://github.com/abritopach",
   "license": "MIT",
   "main": "server.js",
   "scripts": {
