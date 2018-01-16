@@ -1,6 +1,6 @@
 <form #myForm="ngForm" (ngSubmit)="sendQuery(myForm)">
 
-  <mat-grid-list [cols]="cols" rowHeight="5:1">
+  <mat-grid-list [cols]="cols" rowHeight="4:1">
     <mat-grid-tile>
       <mat-form-field class="full-width" hintLabel="Necesario nombre y apellidos">
         <input #name="ngModel" matInput type="text" name="name" placeholder="Nombre y apellidos" ngModel required>

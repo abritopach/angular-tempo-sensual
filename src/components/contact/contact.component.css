@@ -5,3 +5,7 @@
 agm-map {
     height: 300px;
 }
+
+.button-row {
+    padding-top: 10px;
+}
