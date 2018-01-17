@@ -1,9 +1,9 @@
 
 {
-  "name": "TempoSensual",
-  "short_name": "TS",
+  "name": "Tempo Sensual Dance School",
+  "short_name": "Tempo Sensual",
   "theme_color": "#d73964",
-  "background_color": "#d73964",
+  "background_color": "#4153af",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
