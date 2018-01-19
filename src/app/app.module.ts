@@ -31,6 +31,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { MailSenderService } from '../services/mail-sender.service';
 import { MailProviderSendgridService } from '../services/mail-provider-sendgrid.service';
 import { MailProviderMailgunService } from '../services/mail-provider-mailgun.service';
+import { MailProviderFormspreeService } from '../services/mail-provider-formspree.service';
 
 import { Ng2IziToastModule } from 'ng2-izitoast';
 
@@ -76,7 +77,8 @@ import { TelephoneNumberFormatValidatorDirective } from '../directives/validator
   providers: [
     MailSenderService,
     MailProviderSendgridService,
-    MailProviderMailgunService
+    MailProviderMailgunService,
+    MailProviderFormspreeService
   ],
   bootstrap: [AppComponent]
 })

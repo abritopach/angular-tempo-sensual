@@ -4,10 +4,10 @@ import { IMailProvider } from './imail-provider';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class MailProviderMailgunService implements IMailProvider {
-  private readonly _apiKey = 'key-9a7a395f5e67e3e596e52ab174a98382';
-  private readonly _apiHost = `https://api.mailgun.net/v3/sandbox376a692e985042b18a839bd57f1c63ca.mailgun.org/messages`;
-  private readonly _statusApiUrl = 'https://www.mailgun.com/';
+export class MailProviderFormspreeService implements IMailProvider {
+  private readonly _apiKey = '';
+  private readonly _apiHost = `https://formspree.io/tempo.sensual@gmail.com`;
+  private readonly _statusApiUrl = 'https://formspree.io';
 
   constructor(private http: HttpClient) {}
 
@@ -17,24 +17,13 @@ export class MailProviderMailgunService implements IMailProvider {
 
   private get _headers(): HttpHeaders {
     let headers = new HttpHeaders();
-    headers = headers.append(
-      'Authorization',
-      'Basic ' + btoa(`api:${this._apiKey}`)
-    );
-    headers = headers.append('Access-Control-Allow-Origin', '*');
-    headers = headers.append(
-      'Content-Type',
-      'application/x-www-form-urlencoded'
-    );
+    headers = headers.append('Accept', 'application/json');
+    headers = headers.append('Content-Type', 'application/x-www-form-urlencoded');
     return headers;
   }
 
-  sendMail(
-    from: string,
-    to: string,
-    subject: string,
-    message: string
-  ): Observable<any> {
+
+  sendMail(from: string, to: string, subject: string, message: string): Observable<any> {
     const body = this._getSendMailRequestBody(from, to, subject, message);
     return this.http.post(this._apiHost, body, {
       headers: this._headers,
@@ -63,5 +52,7 @@ export class MailProviderMailgunService implements IMailProvider {
     body.set('subject', subject);
     body.set('text', message);
     return body.toString();
+    // return `from=${from}&to=${to}&subject=${subject}&text=${message}`;
   }
+
 }
