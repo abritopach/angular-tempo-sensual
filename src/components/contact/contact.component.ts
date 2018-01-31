@@ -22,6 +22,7 @@ export class ContactComponent implements OnInit {
 
   // The number of colums in the md-grid-list directive.
   cols: number;
+  rowHeight: String = '4:1';
 
   lat = 40.4015689;
   lng = -3.6965655;
@@ -42,6 +43,13 @@ export class ContactComponent implements OnInit {
     };
 
     this.observableMedia.subscribe(x => this.cols = breakpoints[x.mqAlias]);
+
+    if (this.cols === 1) {
+      this.rowHeight = '3:1';
+    }
+    if (this.cols === 2) {
+      this.rowHeight = '2:1';
+    }
   }
 
   sendQuery(myForm: NgForm) {
